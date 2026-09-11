@@ -777,3 +777,62 @@ nav ul.menu-abierto {
     font-weight: bold;
     color: #A85F45;
 }
+
+/* ==============================
+   MENÚ DESPLEGABLE (DROPDOWN)
+   ============================== */
+
+nav ul li.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #F5E6D3;
+    min-width: 170px;
+    box-shadow: 0 8px 16px rgba(63, 48, 43, 0.15);
+    border-radius: 8px;
+    padding: 10px 0;
+    z-index: 1000;
+    flex-direction: column;
+    gap: 0;
+}
+
+.dropdown-menu li {
+    width: 100%;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 10px 20px;
+    font-size: 15px;
+    color: #3F302B;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.dropdown-menu a:hover {
+    background-color: #EBD5C1;
+    color: #A85F45;
+}
+
+/* Mostrar menú al pasar el mouse (en desktop) */
+nav ul li.dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+/* Botón ver colección dentro de tarjetas */
+.boton-categoria {
+    display: inline-block;
+    margin-top: 12px;
+    color: #A85F45;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.boton-categoria:hover {
+    color: #6F5145;
+}

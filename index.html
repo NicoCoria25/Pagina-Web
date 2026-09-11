@@ -17,12 +17,20 @@
     </div>
 
     <button class="menu-toggle" aria-label="Abrir menú">
-    ☰
-</button>
+        ☰
+    </button>
 
     <ul>
         <li><a href="#inicio">Inicio</a></li>
-        <li><a href="#creaciones">Creaciones</a></li>
+        <li class="dropdown">
+            <a href="creaciones.html" class="dropdown-link">Creaciones ▾</a>
+            <ul class="dropdown-menu">
+                <li><a href="ceramica.html">Cerámica</a></li>
+                <li><a href="sahumerios.html">Sahumerios</a></li>
+                <li><a href="jabones.html">Jabones</a></li>
+                <li><a href="velas.html">Velas</a></li>
+            </ul>
+        </li>
         <li><a href="#proceso">Proceso</a></li>
         <li><a href="#sobre-mi">Sobre mí</a></li>
         <li><a href="#contacto">Contacto</a></li>
@@ -50,49 +58,50 @@
 
     <div class="seccion-titulo">
         <p class="subtitulo">MIS CREACIONES</p>
-        <h2>Piezas únicas hechas a mano</h2>
+        <h2>Explorá nuestras categorías</h2>
         <p>
-            Cada pieza es creada artesanalmente, cuidando cada detalle.
+            Cada pieza y producto es elaborado artesanalmente con dedicación.
         </p>
     </div>
 
     <div class="galeria">
 
         <div class="pieza">
-            <img src="img/pieza1.jpg" alt="Creación artesanal de cerámica">
-
-        <div class="pieza-info">
-            <h3>Creación artesanal</h3>
-
-            <p>
-                Pieza realizada completamente a mano,
-                cuidando cada detalle.
-            </p>
+            <img src="img/pieza1.jpg" alt="Cerámica Artesanal">
+            <div class="pieza-info">
+                <h3>Cerámica Artesanal</h3>
+                <p>Piezas únicas realizadas a mano para tu hogar.</p>
+                <a href="ceramica.html" class="boton-categoria">Ver colección →</a>
+            </div>
         </div>
-    </div>
 
         <div class="pieza">
-            <img src="img/pieza2.jpg" alt="Pieza de cerámica artesanal">
-
-        <div class="pieza-info">
-            <h3>Pieza artesanal</h3>
-
-            <p>
-                Una creación única realizada completamente a mano.
-            </p>
+            <img src="img/sahumerio1.jpg" alt="Sahumerios Artesanales">
+            <div class="pieza-info">
+                <h3>Sahumerios</h3>
+                <p>Aromas naturales pensados para acompañar tus espacios.</p>
+                <a href="sahumerios.html" class="boton-categoria">Ver colección →</a>
+            </div>
         </div>
-    </div>
 
         <div class="pieza">
-            <img src="img/pieza3.jpg" alt="Cerámica hecha a mano">
-
-        <div class="pieza-info">
-            <h3>Cerámica hecha a mano</h3>
-
-            <p>
-                Cada detalle de esta pieza fue trabajado artesanalmente.
-            </p>
+            <img src="img/jabon1.jpg" alt="Jabones Artesanales">
+            <div class="pieza-info">
+                <h3>Jabones</h3>
+                <p>Jabones artesanales elaborados con ingredientes naturales.</p>
+                <a href="jabones.html" class="boton-categoria">Ver colección →</a>
+            </div>
         </div>
+
+        <div class="pieza">
+            <img src="img/vela1.jpg" alt="Velas Artesanales">
+            <div class="pieza-info">
+                <h3>Velas</h3>
+                <p>Velas de cera para darle calidez y luz a tus ambientes.</p>
+                <a href="velas.html" class="boton-categoria">Ver colección →</a>
+            </div>
+        </div>
+
     </div>
 
 </section>
