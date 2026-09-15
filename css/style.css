@@ -193,9 +193,13 @@ line-height: 1.6;
     padding: 22px;
 }
 
+/* Estilo base para los títulos de las tarjetas */
 .pieza-info h3 {
-    font-size: 21px;
-    margin-bottom: 10px;
+    font-size: 1.25rem;
+    line-height: 1.3;
+    word-break: normal;
+    overflow-wrap: break-word;
+    margin-bottom: 8px;
 }
 
 .pieza-info p {
@@ -632,6 +636,14 @@ nav ul.menu-abierto {
         height: 280px;
     }
 
+    .pieza-info {
+        padding: 12px 10px;
+    }
+
+    .pieza-info h3 {
+        font-size: 1.1rem; /* Esta regla sobrescribe la de arriba solo en celulares */
+    }
+
     .sobre-mi-imagen img {
         height: 350px;
     }
@@ -661,9 +673,10 @@ nav ul.menu-abierto {
     display: block;
 }
 
+    /* Ajustes para creaciones.html en Celulares */
     .creaciones-principal {
-    padding: 70px 20px;
-}
+        padding: 50px 20px;
+    }
 
 .categoria-imagen {
     height: 240px;
@@ -717,13 +730,9 @@ nav ul.menu-abierto {
 }
 
 .categorias-creaciones {
-    max-width: 1100px;
-    margin: 0 auto;
-
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-}
+        grid-template-columns: 1fr; /* Pasa a 1 sola tarjeta por fila en el celular */
+        gap: 20px;
+    }
 
 .categoria-creacion {
     display: flex;
@@ -746,10 +755,8 @@ nav ul.menu-abierto {
 }
 
 .categoria-imagen {
-    width: 100%;
-    height: 280px;
-    overflow: hidden;
-}
+        height: 200px; /* Ajusta la altura de la imagen en celulares */
+    }
 
 .categoria-imagen img {
     width: 100%;
@@ -767,19 +774,20 @@ nav ul.menu-abierto {
 }
 
 .categoria-contenido {
-    padding: 25px;
-}
+        padding: 18px 15px; /* Le da más espacio útil al texto */
+    }
 
 .categoria-contenido h2 {
-    font-size: 28px;
-    margin-bottom: 12px;
-}
+        font-size: 20px; /* Reducido de 28px a 20px para que NUNCA se corte la palabra */
+        line-height: 1.2;
+        word-break: normal;
+        overflow-wrap: break-word;
+    }
 
 .categoria-contenido p {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 18px;
-}
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
 
 .categoria-contenido span {
     font-size: 15px;
