@@ -209,6 +209,15 @@ padding: 100px 60px;
 background-color: #F5E6D3;
 }
 
+/* Imagen representativa en las tarjetas de procesos */
+.paso .proceso-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
 .pasos {
 max-width: 1100px;
 margin: 0 auto;
@@ -835,4 +844,36 @@ nav ul li.dropdown:hover .dropdown-menu {
 
 .boton-categoria:hover {
     color: #6F5145;
+}
+
+/* ==============================
+   CONTENEDOR DE VIDEO
+   ============================== */
+
+.contenedor-video {
+    max-width: 900px;
+    margin: 0 auto 60px;
+    text-align: center;
+}
+
+.contenedor-video h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(63, 48, 43, 0.15);
+    background-color: #000;
+}
+
+.video-wrapper video,
+.video-wrapper iframe {
+    width: 100%;
+    max-height: 500px;
+    display: block;
+    border: none;
 }
