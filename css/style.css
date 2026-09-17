@@ -664,7 +664,7 @@ footer {
     .proceso,
     .sobre-mi,
     .contacto {
-        padding: 70px 20px;
+        padding: 50px 20px;
     }
 
     .seccion-titulo h2 {
@@ -692,9 +692,39 @@ footer {
         height: 350px;
     }
 
+    /* === AJUSTES DE CONTACTO EN CELULAR === */
+    .contacto-contenido {
+        grid-template-columns: 1fr; /* Una sola columna para que no queden apretados */
+        gap: 30px;
+    }
+
     .contacto-info,
     .contacto-formulario {
-        padding: 30px 25px;
+        padding: 25px 20px;
+    }
+
+    .contacto-info h3,
+    .contacto-formulario h3 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    /* 16px evita el zoom automático al tocar para escribir en celulares */
+    .select-contacto,
+    .contacto-formulario input,
+    .contacto-formulario textarea {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .contacto-enlace {
+        padding: 12px 15px;
+        font-size: 15px;
+    }
+
+    .contacto-formulario button {
+        padding: 14px;
+        font-size: 16px;
     }
 
     .footer-links {
@@ -729,7 +759,6 @@ footer {
         margin-bottom: 12px;
     }
 }
-
 
 /* ==========================================
    SECCIÓN CONTACTO Y REDES (DISEÑO MEJORADO)
