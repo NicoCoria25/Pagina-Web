@@ -387,7 +387,7 @@ nav ul li.dropdown:hover .dropdown-menu {
 }
 
 /* ==============================
-   SOBRE MÍ & CONTACTO
+   SOBRE MÍ
    ============================== */
 
 .sobre-mi {
@@ -430,6 +430,141 @@ nav ul li.dropdown:hover .dropdown-menu {
     margin-bottom: 20px;
 }
 
+/* ==========================================
+   SECCIÓN CONTACTO Y REDES (ESCRITORIO)
+   ========================================== */
+
+.contacto {
+    padding: 100px 60px;
+    background-color: #F5E6D3;
+}
+
+.contacto-contenido {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.contacto-info,
+.contacto-formulario {
+    background-color: #FFFAF3;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(63, 48, 43, 0.08);
+    border: 1px solid rgba(216, 194, 173, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contacto-info:hover,
+.contacto-formulario:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(63, 48, 43, 0.12);
+}
+
+.contacto-info h3,
+.contacto-formulario h3 {
+    font-size: 26px;
+    color: #3F302B;
+    margin-bottom: 12px;
+    font-weight: 700;
+}
+
+.contacto-subtexto,
+.contacto-info p {
+    font-size: 15px;
+    color: #6F5145;
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.contacto-enlace {
+    display: block;
+    padding: 14px 18px;
+    margin-bottom: 14px;
+    border: 1px solid #E5D5C5;
+    border-radius: 10px;
+    background-color: #FAF6F0;
+    color: #3F302B;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.contacto-enlace:hover {
+    background-color: #A85F45;
+    color: #ffffff;
+    transform: translateX(6px);
+}
+
+.contacto-formulario form {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo-grupo {
+    margin-bottom: 18px;
+    text-align: left;
+}
+
+.campo-grupo label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #3F302B;
+}
+
+.select-contacto,
+.contacto-formulario input,
+.contacto-formulario textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1.5px solid #D8C2AD;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 15px;
+    color: #3F302B;
+    background-color: #FAF6F0;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+.contacto-formulario textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.select-contacto:focus,
+.contacto-formulario input:focus,
+.contacto-formulario textarea:focus {
+    outline: none;
+    background-color: #ffffff;
+    border-color: #A85F45;
+    box-shadow: 0 0 0 4px rgba(168, 95, 69, 0.15);
+}
+
+.contacto-formulario button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #A85F45 0%, #8C4B34 100%);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(168, 95, 69, 0.25);
+    transition: all 0.3s ease;
+}
+
+.contacto-formulario button:hover {
+    background: linear-gradient(135deg, #8C4B34 0%, #6F5145 100%);
+    box-shadow: 0 6px 18px rgba(168, 95, 69, 0.4);
+    transform: translateY(-2px);
+}
 
 /* ==============================
    VIDEO & VISOR
@@ -603,7 +738,7 @@ footer {
 }
 
 /* ==============================
-   RESPONSIVE - CELULARES (HASTA 600PX)
+   RESPONSIVE - CELULARES (HASTA 600PX) - DEBE IR AL FINAL
    ============================== */
 
 @media (max-width: 600px) {
@@ -664,7 +799,7 @@ footer {
     .proceso,
     .sobre-mi,
     .contacto {
-        padding: 50px 20px;
+        padding: 50px 15px;
     }
 
     .seccion-titulo h2 {
@@ -692,15 +827,15 @@ footer {
         height: 350px;
     }
 
-    /* === AJUSTES DE CONTACTO EN CELULAR === */
+    /* FORZAR 1 COLUMNA EN CELULAR */
     .contacto-contenido {
-        grid-template-columns: 1fr; /* Una sola columna para que no queden apretados */
-        gap: 30px;
+        grid-template-columns: 1fr !important;
+        gap: 25px;
     }
 
     .contacto-info,
     .contacto-formulario {
-        padding: 25px 20px;
+        padding: 25px 18px;
     }
 
     .contacto-info h3,
@@ -709,7 +844,6 @@ footer {
         margin-bottom: 10px;
     }
 
-    /* 16px evita el zoom automático al tocar para escribir en celulares */
     .select-contacto,
     .contacto-formulario input,
     .contacto-formulario textarea {
@@ -731,7 +865,6 @@ footer {
         gap: 15px;
     }
 
-    /* Creaciones en Celular */
     .creaciones-principal {
         padding: 50px 20px;
     }
@@ -758,145 +891,4 @@ footer {
         font-size: 14px;
         margin-bottom: 12px;
     }
-}
-
-/* ==========================================
-   SECCIÓN CONTACTO Y REDES (DISEÑO MEJORADO)
-   ========================================== */
-
-.contacto {
-    padding: 100px 60px;
-    background-color: #F5E6D3;
-}
-
-.contacto-contenido {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
-
-/* Tarjetas principales (Información / Formulario) */
-.contacto-info,
-.contacto-formulario {
-    background-color: #FFFAF3;
-    padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 10px 30px rgba(63, 48, 43, 0.08);
-    border: 1px solid rgba(216, 194, 173, 0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.contacto-info:hover,
-.contacto-formulario:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 15px 35px rgba(63, 48, 43, 0.12);
-}
-
-.contacto-info h3,
-.contacto-formulario h3 {
-    font-size: 26px;
-    color: #3F302B;
-    margin-bottom: 12px;
-    font-weight: 700;
-}
-
-.contacto-subtexto,
-.contacto-info p {
-    font-size: 15px;
-    color: #6F5145;
-    margin-bottom: 24px;
-    line-height: 1.5;
-}
-
-/* Enlaces de Redes Sociales */
-.contacto-enlace {
-    display: block;
-    padding: 14px 18px;
-    margin-bottom: 14px;
-    border: 1px solid #E5D5C5;
-    border-radius: 10px;
-    background-color: #FAF6F0;
-    color: #3F302B;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
-
-.contacto-enlace:hover {
-    background-color: #A85F45;
-    color: #ffffff;
-    transform: translateX(6px);
-}
-
-/* Formulario y Campos */
-.contacto-formulario form {
-    display: flex;
-    flex-direction: column;
-}
-
-.campo-grupo {
-    margin-bottom: 18px;
-    text-align: left;
-}
-
-.campo-grupo label {
-    display: block;
-    font-weight: 600;
-    font-size: 14px;
-    margin-bottom: 8px;
-    color: #3F302B;
-}
-
-.select-contacto,
-.contacto-formulario input,
-.contacto-formulario textarea {
-    width: 100%;
-    padding: 14px;
-    border: 1.5px solid #D8C2AD;
-    border-radius: 8px;
-    font-family: inherit;
-    font-size: 15px;
-    color: #3F302B;
-    background-color: #FAF6F0;
-    transition: all 0.3s ease;
-    box-sizing: border-box;
-}
-
-.contacto-formulario textarea {
-    min-height: 130px;
-    resize: vertical;
-}
-
-/* Focus en campos de texto */
-.select-contacto:focus,
-.contacto-formulario input:focus,
-.contacto-formulario textarea:focus {
-    outline: none;
-    background-color: #ffffff;
-    border-color: #A85F45;
-    box-shadow: 0 0 0 4px rgba(168, 95, 69, 0.15);
-}
-
-/* Botón de Enviar */
-.contacto-formulario button {
-    width: 100%;
-    padding: 15px;
-    border: none;
-    border-radius: 8px;
-    background: linear-gradient(135deg, #A85F45 0%, #8C4B34 100%);
-    color: white;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    box-shadow: 0 4px 12px rgba(168, 95, 69, 0.25);
-    transition: all 0.3s ease;
-}
-
-.contacto-formulario button:hover {
-    background: linear-gradient(135deg, #8C4B34 0%, #6F5145 100%);
-    box-shadow: 0 6px 18px rgba(168, 95, 69, 0.4);
-    transform: translateY(-2px);
 }
