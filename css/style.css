@@ -315,6 +315,43 @@ nav ul li.dropdown:hover .dropdown-menu {
 }
 
 /* ==============================
+   PÁGINA DE PROCESOS (GENERAL)
+   ============================== */
+
+.procesos-principal {
+    padding: 80px 40px;
+    min-height: 70vh;
+}
+
+.categorias-procesos {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.categoria-proceso {
+    display: flex;
+    flex-direction: column;
+    background-color: #F5E6D3;
+    border-radius: 14px;
+    overflow: hidden;
+    text-decoration: none;
+    color: #3F302B;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categoria-proceso:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(63, 48, 43, 0.15);
+}
+
+.categoria-proceso:hover .categoria-imagen img {
+    transform: scale(1.05);
+}
+
+/* ==============================
    PÁGINA DE CREACIONES (PC)
    ============================== */
 
@@ -891,4 +928,15 @@ footer {
         font-size: 14px;
         margin-bottom: 12px;
     }
+
+    /* Procesos en Celular */
+    .procesos-principal {
+        padding: 50px 20px;
+    }
+
+    .categorias-procesos {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
 }
