@@ -50,66 +50,74 @@
     </nav>
 
     <main>
-        <section class="proceso">
+        <section class="seccion-procesos">
+    <div class="seccion-titulo">
+        <span class="subtitulo">PASO A PASO</span>
+        <h2>El Proceso de la Cerámica</h2>
+        <p>Transformando la arcilla en piezas duraderas y únicas a través del arte y el fuego.</p>
+    </div>
 
-            <div class="seccion-titulo">
-                <p class="subtitulo">PASO A PASO</p>
-                <h1>El Proceso de la Cerámica</h1>
-                <p>
-                    Transformando la arcilla en piezas duraderas y únicas a través del arte y el fuego.
-                </p>
+    <div class="contenedor-procesos-zigzag">
+        
+        <!-- PASO 01 -->
+        <article class="paso-card">
+            <div class="paso-media">
+                <video autoplay loop muted playsinline poster="img/procesos/ceramica-paso1.jpg">
+                    <source src="img/procesos/amasado.mp4" type="video/mp4">
+                </video>
             </div>
-
-            <!-- SECCIÓN DE VIDEO DEL PROCESO -->
-            <div class="contenedor-video">
-                <h2>Conocé el taller en acción</h2>
-                <div class="video-wrapper">
-                    <!-- Podés usar un video mp4 local o un iframe de YouTube/Instagram -->
-                    <video controls poster="img/pieza1.jpg">
-                        <source src="videos/proceso-ceramica.mp4" type="video/mp4">
-                        Tu navegador no soporta la reproducción de video.
-                    </video>
-                </div>
+            <div class="paso-info">
+                <span class="paso-badge">01</span>
+                <h3>Amasado y Modelado</h3>
+                <p>Se prepara la arcilla eliminando las burbujas de aire y se moldea a mano o en torno para dar origen a la forma deseada.</p>
             </div>
+        </article>
 
-            <!-- PASOS DETALLADOS -->
-            <div class="pasos">
-
-                <div class="paso">
-                    <span>01</span>
-                    <h3>Amasado y Modelado</h3>
-                    <p>
-                        Se prepara la arcilla eliminando las burbujas de aire y se moldea a mano o en torno para dar origen a la forma deseada.
-                    </p>
-                </div>
-
-                <div class="paso">
-                    <span>02</span>
-                    <h3>Secado Lento</h3>
-                    <p>
-                        Las piezas se dejan secar gradualmente a temperatura ambiente para evitar grietas o deformaciones en la estructura.
-                    </p>
-                </div>
-
-                <div class="paso">
-                    <span>03</span>
-                    <h3>Primera Cocción (Bizcochado)</h3>
-                    <p>
-                        Ingresan al horno a más de 1000°C. Este proceso transforma la arcilla húmeda en un material cerámico poroso pero resistente.
-                    </p>
-                </div>
-
-                <div class="paso">
-                    <span>04</span>
-                    <h3>Esmaltado y Detalle Final</h3>
-                    <p>
-                        Se aplican esmaltes aptos para uso diario y color. Luego se realiza una segunda horneada que vitrifica el acabado.
-                    </p>
-                </div>
-
+        <!-- PASO 02 (Invertido) -->
+        <article class="paso-card paso-invertido">
+            <div class="paso-media">
+                <video autoplay loop muted playsinline poster="img/procesos/ceramica-paso2.jpg">
+                    <source src="img/procesos/secado.mp4" type="video/mp4">
+                </video>
             </div>
+            <div class="paso-info">
+                <span class="paso-badge">02</span>
+                <h3>Secado Lento</h3>
+                <p>Las piezas se dejan secar gradualmente a temperatura ambiente para evitar grietas o deformaciones en la estructura.</p>
+            </div>
+        </article>
 
-        </section>
+        <!-- PASO 03 -->
+        <article class="paso-card">
+            <div class="paso-media">
+                <video autoplay loop muted playsinline poster="img/procesos/ceramica-paso3.jpg">
+                    <source src="img/procesos/horneado1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="paso-info">
+                <span class="paso-badge">03</span>
+                <h3>Primera Cocción (Bizcochado)</h3>
+                <p>Ingresan al horno a más de 1000°C. Este proceso transforma la arcilla húmeda en un material cerámico poroso pero resistente.</p>
+            </div>
+        </article>
+
+        <!-- PASO 04 (Invertido) -->
+        <article class="paso-card paso-invertido">
+            <div class="paso-media">
+                <video autoplay loop muted playsinline poster="img/procesos/ceramica-paso4.jpg">
+                    <source src="img/procesos/esmaltado.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="paso-info">
+                <span class="paso-badge">04</span>
+                <h3>Esmaltado y Detalle Final</h3>
+                <p>Se aplican esmaltes aptos para uso diario y color. Luego se realiza una segunda horneada que vitrifica el acabado.</p>
+            </div>
+        </article>
+
+    </div>
+</section>
+
     </main>
 
     <footer>
