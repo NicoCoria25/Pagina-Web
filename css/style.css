@@ -112,7 +112,7 @@ nav ul li.dropdown:hover .dropdown-menu {
     background-image: linear-gradient(
         rgba(63, 48, 43, 0.45),
         rgba(63, 48, 43, 0.45)
-    ), url("../img/hero.jpg");
+    ), url("../img/hero.jpeg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
