@@ -53,40 +53,44 @@ if (elementosAnimados.length > 0) {
 }
 
 // 4. Envío de formulario a WhatsApp (Solo en páginas con formulario de contacto)
-document.getElementById('form-contacto-multiples').addEventListener('submit', function(e) {
-    e.preventDefault();
+const formContacto = document.getElementById('form-contacto-multiples');
 
-    const canal = document.getElementById('canal-contacto').value;
-    const mensaje = document.getElementById('mensaje-texto').value.trim();
+if (formContacto) {
+    formContacto.addEventListener('submit', function(e) {
+        e.preventDefault();
 
-    if (!mensaje) {
-        alert('Por favor, escribí un mensaje antes de enviar.');
-        return;
-    }
+        const canal = document.getElementById('canal-contacto').value;
+        const mensaje = document.getElementById('mensaje-texto').value.trim();
 
-    // Configuración de destinos (Reemplazar con los datos reales)
-    const NUMERO_WHATSAPP = "5491155888108"; // Número con código de país sin + ni espacios
-    const USUARIO_INSTAGRAM = "ceramica_artesanal_jessi"; // Nombre de usuario sin @
-    const PAGINA_FACEBOOK = "Jessica Romero";   // Nombre de usuario o ID de la página de FB
+        if (!mensaje) {
+            alert('Por favor, escribí un mensaje antes de enviar.');
+            return;
+        }
 
-    if (canal === 'whatsapp') {
-        const urlWhatsApp = `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(mensaje)}`;
-        window.open(urlWhatsApp, '_blank');
+        // Configuración de destinos
+        const NUMERO_WHATSAPP = "5491155888108"; // Número con código de país sin + ni espacios
+        const USUARIO_INSTAGRAM = "ceramica_artesanal_jessi"; // Nombre de usuario sin @
+        const PAGINA_FACEBOOK = "Jessica Romero";   // Nombre de usuario o ID de la página de FB
 
-    } else if (canal === 'instagram') {
-        navigator.clipboard.writeText(mensaje).then(() => {
-            alert('¡Tu mensaje fue copiado al portapapeles! Abril el chat de Instagram y pegalo.');
-            window.open(`https://instagram.com/${USUARIO_INSTAGRAM}`, '_blank');
-        }).catch(() => {
-            window.open(`https://instagram.com/${USUARIO_INSTAGRAM}`, '_blank');
-        });
+        if (canal === 'whatsapp') {
+            const urlWhatsApp = `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(mensaje)}`;
+            window.open(urlWhatsApp, '_blank');
 
-    } else if (canal === 'facebook') {
-        navigator.clipboard.writeText(mensaje).then(() => {
-            alert('¡Tu mensaje fue copiado al portapapeles! Abril el chat de Facebook y pegalo.');
-            window.open(`https://m.me/${PAGINA_FACEBOOK}`, '_blank');
-        }).catch(() => {
-            window.open(`https://m.me/${PAGINA_FACEBOOK}`, '_blank');
-        });
-    }
-});
+        } else if (canal === 'instagram') {
+            navigator.clipboard.writeText(mensaje).then(() => {
+                alert('¡Tu mensaje fue copiado al portapapeles! Abrí el chat de Instagram y pegalo.');
+                window.open(`https://instagram.com/${USUARIO_INSTAGRAM}`, '_blank');
+            }).catch(() => {
+                window.open(`https://instagram.com/${USUARIO_INSTAGRAM}`, '_blank');
+            });
+
+        } else if (canal === 'facebook') {
+            navigator.clipboard.writeText(mensaje).then(() => {
+                alert('¡Tu mensaje fue copiado al portapapeles! Abrí el chat de Facebook y pegalo.');
+                window.open(`https://m.me/${PAGINA_FACEBOOK}`, '_blank');
+            }).catch(() => {
+                window.open(`https://m.me/${PAGINA_FACEBOOK}`, '_blank');
+            });
+        }
+    });
+}
