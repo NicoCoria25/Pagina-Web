@@ -264,6 +264,58 @@ nav ul li.dropdown:hover .dropdown-menu {
 
 
 /* ==============================
+   NUEVO BLOQUE DE PRECIO Y CONSULTA
+   ============================== */
+
+/* Estilo para la descripción larga */
+.pieza-descripcion-larga {
+    font-size: 0.9rem;
+    color: #666; /* Gris más suave */
+    line-height: 1.5;
+    margin-bottom: 15px; /* Separación con el bloque de precio */
+}
+
+/* Contenedor de Precio y Botón */
+.pieza-compra {
+    display: flex;
+    justify-content: space-between; /* Separa precio a la izq, botón a la der */
+    align-items: center;
+    border-top: 1px solid #EEE; /* Línea sutil separadora */
+    padding-top: 12px;
+    margin-top: auto; /* Empuja este bloque al fondo de la info */
+}
+
+/* Estilo del Precio */
+.pieza-precio {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #3F302B; /* Tono marrón oscuro */
+    font-family: 'Playfair Display', serif; /* Usamos la fuente de títulos */
+}
+
+/* Estilo del Botón de Consultar */
+.btn-consultar {
+    display: inline-block;
+    background-color: transparent;
+    color: #A85F45; /* Tono terracota */
+    border: 2px solid #A85F45;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-consultar:hover {
+    background-color: #A85F45;
+    color: #FFF;
+    box-shadow: 0 4px 8px rgba(168, 95, 69, 0.3);
+}
+
+
+/* ==============================
    CARRUSEL DE MÚLTIPLES IMÁGENES
    ============================== */
 
